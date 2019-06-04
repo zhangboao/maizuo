@@ -10,6 +10,7 @@
       
 
     </div>
+    <div class="swiper-pagination" id='hehe'></div>
       
   </div>
 </template>
@@ -34,7 +35,12 @@ export default {
 //   },
   mounted(){
     new Swiper('.swiper-container',{
-      loop:true
+      loop:true,
+      pagination: {
+        el: '.swiper-pagination',
+        bulletClass : 'my-bullet',
+        bulletActiveClass: 'my-bullet-active',
+      },
     })
   }
 }
@@ -46,14 +52,14 @@ export default {
 .swiper{
     .h(210);
     .w(375);
+
    
     img{
         .w(375);
         .h(210);
         display:block;
-    }
+    } 
 }
-
 
 </style>
 
