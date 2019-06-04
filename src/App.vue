@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <register></register>
+   <index></index>
   </div>
 </template>
 
 <script>
-import register from './components/pages/register'
+import index from './components/pages/index/index.vue'
 
 export default {
   name: 'app',
   components: {
-    register
+    index
   }
 }
 </script>
