@@ -1,10 +1,75 @@
 @import './variable.less';
-.w(@px){
-  width: unit(@px/@remSize,rem);
+
+.w(@px) {
+  width: unit(@px/@remSize, rem);
 }
-.h(@px){
-  height: unit(@px/@remSize,rem);
+
+.h(@px) {
+  height: unit(@px/@remSize, rem);
 }
-.l_h(@px){
-  line-height: unit(@px/@remSize,rem);
+
+.l_h(@px) {
+  line-height: unit(@px/@remSize, rem);
+}
+
+.mt(@px ) {
+  margin-top: unit(@px/@remSize, rem);
+}
+
+.mb(@px ) {
+  margin-bottom: unit(@px/@remSize, rem);
+}
+
+.ml(@px ) {
+  margin-left: unit(@px/@remSize, rem);
+}
+
+.mr(@px ) {
+  margin-right: unit(@px/@remSize, rem);
+}
+
+.margin(@top, @right, @bottom, @left) {
+  margin-right: unit(@right/@remSize, rem);
+  margin-left: unit(@left/@remSize, rem);
+  margin-top: unit(@top/@remSize, rem);
+  margin-bottom: unit(@bottom/@remSize, rem);
+}
+
+.pt(@px ) {
+  padding-top: unit(@px/@remSize, rem);
+}
+
+.pb(@px ) {
+  padding-bottom: unit(@px/@remSize, rem);
+}
+
+.pl(@px ) {
+  padding-left: unit(@px/@remSize, rem);
+}
+
+.pr(@px ) {
+  padding-right: unit(@px/@remSize, rem);
+}
+
+.padding(@top, @right, @bottom, @left) {
+  padding-right: unit(@right/@remSize, rem);
+  padding-left: unit(@left/@remSize, rem);
+  padding-top: unit(@top/@remSize, rem);
+  padding-bottom: unit(@bottom/@remSize, rem);
+}
+
+.t(@px ) {
+  top: unit(@px/@remSize, rem);
+}
+
+.b(@px ) {
+  bottom: unit(@px/@remSize, rem);
+}
+
+.l(@px ) {
+  left: unit(@px/@remSize, rem);
+}
+
+.r(@px ) {
+  right: unit(@px/@remSize, rem);
 }

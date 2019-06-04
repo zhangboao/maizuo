@@ -5,13 +5,16 @@ function resolve (dir) {
 }
 module.exports = {
   devServer: {
+    // 修改端口号
+    port: 8888,
     // 跨域解决
     proxy: {
       '/api': {
-        'target': 'https://m.maizuo.com',
-        'changeOrigin': true,
-        'pathRewrite': {
-          '^/api': ' '
+        target: 'https://m.maizuo.com', // 转发的服务器
+        changeOrigin: true, // 是否允许虚拟站点
+        // ws:true,
+        pathRewrite: {
+          '^/api': '' // 路径重写，多个api
         }
       }
     }

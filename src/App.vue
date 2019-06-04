@@ -1,21 +1,17 @@
 <template>
   <div id="app">
-    <index></index>
-    <!-- <preference></preference> -->
+    <router-view></router-view>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
-import index from "./components/pages/index/index.vue";
-import preference from "./components/pages/preference.vue";
+import Footer from "common/footer.vue";
 export default {
-  name: "app",
-  components: {
-    index,
-    preference
-  }
-};
+  name:"app",
+  components: { Footer }
+}
+// scoped 样式作用域 lang 选择语言
 </script>
-
-<style lang="less">
+<style lang="less" scoped>
 </style>
