@@ -5,6 +5,7 @@
         <img :src="item.imgUrl" alt>
       </div>
     </div>
+    <div class="swiper-pagination" id="hehe"></div>
   </div>
 </template>
 <script>
@@ -26,19 +27,30 @@ export default {
         "X-Host": "mall.cfg.common-banner"
       }
     }).then(res => {
-      console.log(222, res.data);
+      console.log(res.data.data);
+      this.banners = res.data.data;
+      this.$nextTick(() => {
+        new Swiper(".swiper-container", {
+          loop: true,
+          autoplay:true,
+          pagination: {
+            el: ".swiper-pagination",
+            bulletClass: "my-bullet",
+            bulletActiveClass: "my-bullet-active"
+          }
+        });
+      });
     });
   }
 };
 </script>
 <style lang="less" scoped>
-@import url("../../../../node_modules/swiper/dist/css/swiper.min.css");
-@import url("../../../common/style/index.less");
+@import url("~node_modules/swiper/dist/css/swiper.min.css");
+@import url("~style/index.less");
 
 .swiper {
   .h(210);
   .w(375);
-
   img {
     .w(375);
     .h(210);

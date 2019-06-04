@@ -1,20 +1,21 @@
 <template>
   <div id="app">
-   <index></index>
+    <index></index>
+    <!-- <preference></preference> -->
   </div>
 </template>
 
 <script>
-import index from './components/pages/index/index.vue'
-
+import index from "./components/pages/index/index.vue";
+import preference from "./components/pages/preference.vue";
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    index
+    index,
+    preference
   }
-}
+};
 </script>
 
 <style lang="less">
-
 </style>
