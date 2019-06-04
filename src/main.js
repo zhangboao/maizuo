@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-
+import './common/style/reset.less'
 Vue.config.productionTip = false
 
 new Vue({
