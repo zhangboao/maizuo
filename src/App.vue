@@ -1,20 +1,29 @@
 <template>
   <div id="app">
-   <preference></preference>
+      <router-view></router-view>
+      <tab></tab>
   </div>
 </template>
 
 <script>
-// import index from './components/pages/index/index.vue'
-import preference from './components/pages/preference.vue'
+import  tab from  'common/tab'
 export default {
   name: 'app',
-  components: {
-    preference
-  }
+  components:{tab}
 }
+// scoped 样式作用域 lang 选择语言
 </script>
+<style lang="less" scoped>
+// @import url('./common/style/index.less');
 
-<style lang="less">
-
+// #app{
+  // p{
+    // background : @bg;
+    // .demo(@bg);
+    // background: red;
+  //   .w(60);
+  //   height: 100px;
+  //   background: red;
+  // }
+// }
 </style>
