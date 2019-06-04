@@ -1,59 +1,49 @@
 <template>
-<div class="swiper swiper-container">
+  <div class="swiper swiper-container">
     <div class="swiper-wrapper">
-        <div class="swiper-slide" 
-             v-for="(item ,index ) in  banners"
-             :key="index"
-        >
-          <img :src="item" alt="">
-        </div>
-      
-
+      <div class="swiper-slide" v-for="(item ,index ) in  banners" :key="index">
+        <img :src="item.imgUrl" alt>
+      </div>
     </div>
-      
   </div>
 </template>
 <script>
-import Swiper from 'swiper'// 引入swiper插件
-import Axios from 'axios'
+import Swiper from "swiper"; // 引入swiper插件
+import Axios from "axios";
 export default {
-  name:'banner',
-  data(){
-    return{
-      banners:['https://static.maizuo.com/v5/upload/ec395ca4ed8e69b964ca3af2cd89a99d.jpg?x-oss-process=image/quality,Q_70','https://static.maizuo.com/v5/upload/95fc33cf5aece0ecb10e09d85d6e26ac.jpg?x-oss-process=image/quality,Q_70']
-    }
+  name: "banner",
+  data() {
+    return {
+      banners: []
+    };
   },
-//   created(){
-//     Axios.get('http://47.95.207.1:3000/fcj/recommend/banner')
-//     .then((data)=>{
-//       console.log(data)
-//     })
-//     .catch((err)=>{
-//       console.log(err)
-//     })
-//   },
-  mounted(){
-    new Swiper('.swiper-container',{
-      loop:true
-    })
+  created() {
+    Axios({
+      url: "/api/gateway?type=2&cityId=110100&k=3329846",
+      method: "get",
+      headers: {
+        "X-Client-Info": `{"a":"3000","ch":"1002","v":"5.0.4","e":"15595461575025111736417"}`,
+        "X-Host": "mall.cfg.common-banner"
+      }
+    }).then(res => {
+      console.log(222, res.data);
+    });
   }
-}
+};
 </script>
 <style lang="less" scoped>
-@import url('../../../../node_modules/swiper/dist/css/swiper.min.css');
-@import url('../../../common/style/index.less');
+@import url("../../../../node_modules/swiper/dist/css/swiper.min.css");
+@import url("../../../common/style/index.less");
 
-.swiper{
-    .h(210);
+.swiper {
+  .h(210);
+  .w(375);
+
+  img {
     .w(375);
-   
-    img{
-        .w(375);
-        .h(210);
-        display:block;
-    }
+    .h(210);
+    display: block;
+  }
 }
-
-
 </style>
 
