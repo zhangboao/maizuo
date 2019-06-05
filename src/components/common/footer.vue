@@ -19,6 +19,7 @@ export default {};
   .w(375);
   .h(49);
   font-size: 0;
+  background: #fff;
   .nav {
     float: left;
     text-align: center;
