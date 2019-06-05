@@ -33,6 +33,7 @@
     <div class="quality">
       <img src="../../../common/img/special-xuan.jpg">
     </div>
+    <div class="prefer-bottom"></div>
   </div>
 </template>
 <script>
@@ -98,6 +99,9 @@ export default {};
       .h(82);
       .w(375);
     }
+  }
+  .prefer-bottom{
+    .h(50);
   }
 }
 </style>
