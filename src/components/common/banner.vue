@@ -33,6 +33,9 @@ export default {
         new Swiper(".swiper-container", {
           loop: true,
           autoplay: true,
+          autoplay:{
+            disableOnInteraction: false,
+          },
           pagination: {
             el: ".swiper-pagination",
             bulletClass: "my-bullet",
