@@ -6,6 +6,10 @@ import Prefer from 'pages/prefer/prefer'
 import Cinema from 'pages/cinema/cinema'
 import Movie from 'pages/movie/movie'
 import My from 'pages/my/my'
+import nowPlaying from 'pages/movie/nowPlaying.vue'
+import soonPlaying from 'pages/movie/soonPlaying.vue'
+import details from 'pages/movie/details.vue'
+
 // vue 使用路由插件
 Vue.use(VueRouter)
 
@@ -26,11 +30,26 @@ export default new VueRouter({
     },
     {
       path: '/movie',
-      component: Movie
+      component: Movie,
+      children: [
+        {
+          path: 'nowPlaying',
+          component: nowPlaying
+        },
+        {
+          path: 'soonPlaying',
+          component: soonPlaying
+        },
+        {
+          path: 'details',
+          component: details,
+          name: 'details'
+        }
+      ]
     },
     {
       path: '/',
-      redirect: '/movie'
+      redirect: '/movie/nowPlaying'
     }
   ]
 })

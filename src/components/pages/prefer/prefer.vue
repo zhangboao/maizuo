@@ -34,10 +34,16 @@
       <img src="../../../common/img/special-xuan.jpg">
     </div>
     <div class="prefer-bottom"></div>
+    <Footer></Footer>
   </div>
 </template>
 <script>
-export default {};
+import Footer from "common/footer.vue";
+export default {
+  components: {
+    Footer
+  }
+};
 </script>
 <style lang="less" scoped>
 @import url("../../../common/style/index.less");
@@ -100,7 +106,7 @@ export default {};
       .w(375);
     }
   }
-  .prefer-bottom{
+  .prefer-bottom {
     .h(50);
   }
 }

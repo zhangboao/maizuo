@@ -27,7 +27,6 @@ export default {
         "X-Host": "mall.cfg.common-banner"
       }
     }).then(res => {
-      console.log(res.data.data);
       this.banners = res.data.data;
       this.$nextTick(() => {
         new Swiper(".swiper-container", {
