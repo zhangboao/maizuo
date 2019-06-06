@@ -18,14 +18,15 @@ a {
   border-radius: 50%;
   border: 1px solid #fff;
   margin-right: 8px;
-  float: right;
+  float: left;
 }
 
 .my-bullet-active {
   background: #fff;
-  float: right;
 }
 
 .swiper-pagination {
-  float: left;
+  position: absolute;
+  width: 108px!important;
+  left: 250px!important;
 }
